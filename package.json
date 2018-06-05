@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "devDependencies": {
     "webshot": "^0.18.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
