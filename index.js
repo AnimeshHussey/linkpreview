@@ -31,7 +31,7 @@ const optionsMobile = {
   var app = express();
   var fs = require("fs");
 
-  app.get('/:id', function (req, res) {
+  app.get('/thumbnail', function (req, res) {
 //        // First read existing users.
 //    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
 //     var users = JSON.parse( data );
@@ -41,7 +41,7 @@ const optionsMobile = {
 //  });
     //=================
     // create the screenshot
-    webshot('https://stackoverflow.com', 'pentacode-mobile.png', optionsMobile, function(err) {
+    webshot(req.query.url, 'pentacode-mobile.png', optionsMobile, function(err) {
       if (!err) {
         console.log('Screenshot taken!');
 
