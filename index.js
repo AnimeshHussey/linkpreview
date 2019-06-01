@@ -20,7 +20,8 @@ const optionsMobile = {
 };
 
 app.get('/', function(req, res){
-  res.render('index', { title: 'Express' });
+  res.send('GET request to the homepage');
+  console.log('from fef route');
 });
 
 app.get('/thumbnail', function (req, res) {
