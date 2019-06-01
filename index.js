@@ -31,10 +31,10 @@ app.get('/thumbnail', function (req, res) {
 
 })
 
-var server = app.listen(8087, function () {
-  var host = server.address().address
-  var port = server.address().port
-  console.log("Example app listening at http://%s:%s", host, port)
+var server = app.listen(process.env.PORT, function () {
+  // var host = server.address().address
+  // var port = process.env.PORT; //server.address().port
+  console.log("Example app listening at http://%s:%s", port)
 
 });
 
