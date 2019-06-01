@@ -19,6 +19,10 @@ const optionsMobile = {
   //userAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.20 (KHTML, like Gecko) Mobile/7B298g'
 };
 
+app.get('/', function(req, res){
+  res.render('index', { title: 'Express' });
+});
+
 app.get('/thumbnail', function (req, res) {
   // create the screenshot
   webshot(req.query.url, 'output-thumbnail.png', optionsMobile, function (err) {
@@ -32,7 +36,7 @@ app.get('/thumbnail', function (req, res) {
     }
   });
 
-})
+});
 
 // var server = app.listen(process.env.PORT, function () {
 //   // var host = server.address().address
